@@ -1,0 +1,6 @@
+D:\Конечная папка\C++ Programs\Project1\Project1\bin\Debug\Project1.exe.config
+D:\Конечная папка\C++ Programs\Project1\Project1\bin\Debug\Project1.exe
+D:\Конечная папка\C++ Programs\Project1\Project1\bin\Debug\Project1.pdb
+D:\Конечная папка\C++ Programs\Project1\Project1\obj\Debug\Project1.csprojResolveAssemblyReference.cache
+D:\Конечная папка\C++ Programs\Project1\Project1\obj\Debug\Project1.exe
+D:\Конечная папка\C++ Programs\Project1\Project1\obj\Debug\Project1.pdb
