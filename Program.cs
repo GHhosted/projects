@@ -18,7 +18,7 @@ namespace Project1
                 string stringToFormat = inFile.ReadLine();
                 inFile.Close();
 
-                writer(stringToFormat);
+                writer(stringToFormat, stringLength);
             }
             else
             {
@@ -29,21 +29,32 @@ namespace Project1
         }
 
 
-        static void writer(string stringToFormat)
+        static void writer(string stringToFormat, int stringLength)
         {
             StreamWriter outFile = File.CreateText("out.txt");
-            int length = stringToFormat.Length;
+            string[] stringOfWords = stringToFormat.Split(' ');
 
-            for (int i = 0; i < length; i++)
+            for (int i = 0, counter = 0; i < stringOfWords.Length; i++)
             {
-                if (stringToFormat[i] == ' ')
+                counter += stringOfWords[i].Length;
+                if (counter <= stringLength)
                 {
-                    outFile.WriteLine();
+                    outFile.Write(stringOfWords[i]);
                 }
-                else {
-                    outFile.Write(stringToFormat[i]);
+                else
+                {
+                    counter = 0;
+                    i--;
+                    outFile.WriteLine();
+                    continue;
+                }
+                if (counter + 1 < stringLength)
+                {
+                    outFile.Write(" ");
+                    counter++;
                 }
             }
+
             outFile.Close();
         }
     }
